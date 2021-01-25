@@ -39,11 +39,6 @@ PARAMETERS_KEY = 'parameters'
 MAX_HEIGHT_KEY = 'max_height'
 MAX_LENGTH_KEY = 'max_length'
 
-"""
-Function which take as an input a str coming from the defect aut log and return a Class Of Indication. This COI will be used
-later one to determine which acceptance criteria shall be applied or if the defect is directly rejected by is nature.
-
-"""
 def COI(type_of_indication):
     if type_of_indication in POR_LIST:
         return POROSITY_STR
@@ -99,11 +94,6 @@ def Height_Correction(Surface_interaction, Height, IL, Depth):
             return Depth
         else:
             return Height
-
-"""
-Je considere que l'épaisseur de la soudure est divisee en 8 sections
-"""
-
 
 def Zone_Critere_Acceptation(COI, Surface_Interaction, Depth, WT):
     if COI in CONCAVITY_LIST:

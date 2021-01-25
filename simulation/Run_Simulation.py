@@ -6,8 +6,6 @@ from .Project import AUT_Project
 class Results_Simulation:
     def __init__(self, Project : AUT_Project):
         self.Project = Project
-        #self.Project.Acceptance_Tables()
-        #self.Acceptance = Acceptance
         
     def Run_COI(self):
         Run_COI = [COI(type_of_indication) for type_of_indication in self.Project.AUT_indication['indication_type']]
